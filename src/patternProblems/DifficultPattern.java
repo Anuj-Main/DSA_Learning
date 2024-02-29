@@ -1,0 +1,40 @@
+package patternProblems;
+
+public class DifficultPattern {
+    public static void main(String[] args) {
+        int n = 5;
+
+        // firsthalf-upperhalf
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            // printing spaces
+            int spaces = 2 * (n - i);
+            for (int j = 1; j <= spaces; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        // second-half-lower-half
+
+        for (int i = n; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            // printing spaces
+            int spaces = 2 * (n - i);
+            for (int j = 1; j <= spaces; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
